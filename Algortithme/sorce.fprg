@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="solicode"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-30 07:13:10 AM"/>
+        <attribute name="created" value="c29saWNvZGU7REVTS1RPUC1IVDVSMVFOOzIwMjEtMTEtMzA7MDY6MjI6MzYgQU07MzE5MA=="/>
+        <attribute name="edited" value="c29saWNvZGU7REVTS1RPUC1IVDVSMVFOOzIwMjEtMTEtMzA7MDc6MTM6MTAgQU07MTszMjkx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="guessedNum" type="Real" array="False" size=""/>
+            <assign variable="guessedNum" expression="random(100)"/>
+            <declare name="guess" type="Real" array="False" size=""/>
+            <output expression="&quot;je pense d'un nombre entre 1 et 100 . Pouvez-vous le deviner?&quot;" newline="True"/>
+            <input variable="guess"/>
+            <while expression="guess!=guessedNum">
+                <if expression="guess&lt;guessedNum">
+                    <then>
+                        <output expression="&quot;Essayer un grand nombre !&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;Essayer un petit nombre !&quot;" newline="True"/>
+                    </else>
+                </if>
+                <input variable="guess"/>
+            </while>
+            <output expression="&quot;F&#233;licitations, vous avez gagn&#233;&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
